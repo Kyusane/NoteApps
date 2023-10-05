@@ -1,0 +1,272 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+:root{
+  --primary : #ffff;
+  --secondary: #646cff;
+  --tertiary : #444dfd;
+
+}
+input{
+  background-color: var(--primary);
+  border:3px solid var(--secondary);
+  outline: none;
+  color:var(--tertiary)
+}
+
+input:focus{
+  border:3px solid var(--tertiary)!important;
+  opacity: 1;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--tertiary);
+  border-radius: 2px;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--secondary);
+  cursor: pointer;
+  transition: background-color 0.25s;
+  color:var(--primary);
+}
+
+button:hover {
+  background-color: var(--tertiary);
+}
+
+.notes-filter > button:hover{
+  background-color: var(--primary);
+  color:var(--secondary);
+  border:1px solid var(--secondary)
+
+}
+
+.active-btn{
+  background-color: var(--primary);
+  color: var(--secondary);
+  border:1px solid var(--secondary);
+}
+
+
+#layout{
+  display:flex;
+  width:100vw;
+  height:100vh;
+}
+
+nav{
+  width:15%;
+  background-color: var(--secondary);
+  padding-top:10vh;
+  color:var(--primary);
+}
+nav .route {
+  display:flex;
+  flex-direction: column;
+
+}
+
+nav > span{
+  width:50px;
+  height:50px;
+  transform: rotate(45deg);
+  color:var(--primary);
+  background-color: var(--primary);
+  position:absolute;
+  margin-left: 90px;
+  margin-top :-44vh;
+
+}
+
+.active{
+  background-color: var(--tertiary);
+  font-size:x-large !important;
+  opacity: 1 !important;
+}
+
+nav .route > h3:hover{
+  cursor: pointer;
+  background-color: var(--tertiary);
+}
+nav .route > h3{
+  padding:10px 10px 10px 10px;
+  text-align: left;
+  transition: all ease-in-out .2s;
+  opacity: .8;
+  font-size: medium;
+}
+
+header{
+  width:100%;
+  height: 10vh;
+  background-color: var(--primary);
+  box-shadow: 0px 1px 5px var(--secondary);
+  display:flex;
+  padding:10px;
+  justify-content: space-between;
+}
+
+header .search-box > #search-input{
+  width:50vw;
+  height:7vh;
+  padding:10px;
+  outline: none;
+  transition: .1s ;
+  opacity: .5;
+  color:var(--secondary);
+  border-bottom: 3px solid var(--tertiary);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  
+}
+
+.search-box > button{
+  border-radius: 0;
+  height:7vh;
+}
+
+#search-input:focus{
+  border:3px solid var(--tertiary)!important;
+  opacity: 1;
+  font-size: larger;
+}
+
+.pages{
+  width:85%;
+  background-color:var(--primary);
+}
+
+.pages #content{
+  height:90vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-information{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card{
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  width:31%;
+  height:400px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
+
+.Card .card-data{
+  width:100%;
+  text-align: left;
+  height:80%;
+  word-wrap: break-word;
+}
+.Card .card-data .card-body{
+  padding-top:20px;
+}
+
+.Card .card-btn{
+  display:flex;
+  gap:20px;
+}
+
+.notes-container{
+  width:100%;
+  height:100%;
+  padding:20px;
+}
+
+.note-list {
+  max-height:90%;
+  padding: 10px;
+  gap:20px;
+  width:100%;
+  display:flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.notes-header{
+  padding:5px;
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-header > .notes-filter{
+  display:flex;
+  gap:20px;
+}
+
+.notes{
+  box-shadow: 0 0 10px var(--secondary);
+  border-radius: 20px;
+  padding:20px;
+  background-color: var(--primary);
+  width:300px;
+  height:max-content;
+  animation: fade ease-in-out .2s;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  position: absolute;
+  margin-top: 5vh;
+  margin-left: 60vw;
+}
+
+.notes > p{
+  color:var(--secondary)
+}
+
+.notes > input{
+  padding:10px;
+}
+
+@keyframes fade {
+  from{opacity:0;}
+  to{opacity:1;}
+  
+}
